@@ -1,0 +1,97 @@
+// 基础渐变动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-normal) var(--ease-out);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// 滑动淡入淡出
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition:
+    opacity var(--transition-normal) var(--ease-out),
+    transform var(--transition-normal) var(--ease-out);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+// 缩放
+.scale-enter-active,
+.scale-leave-active {
+  transition:
+    opacity var(--transition-normal) var(--ease-out),
+    transform var(--transition-normal) var(--ease-out);
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+// 旋转淡入淡出
+.rotate-fade-enter-active,
+.rotate-fade-leave-active {
+  transition:
+    opacity var(--transition-normal) var(--ease-out),
+    transform var(--transition-normal) var(--ease-out);
+}
+
+.rotate-fade-enter-from,
+.rotate-fade-leave-to {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0.9);
+}
+
+// 弹跳动画
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// 旋转动画
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 脉冲动画
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// 闪烁动画
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
